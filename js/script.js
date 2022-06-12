@@ -1,6 +1,9 @@
 ///  Case: Rock (0), Paper (1), Scisssors (2)
 ///
 ///
+
+import scoreboardView from "./scoreboardView.js"
+
 function computerPlay(game){
     let computer = Math.floor(Math.random() * 3);
 
@@ -46,5 +49,14 @@ function computerPlay(game){
         }
     }
 }
+
+let playerScore = 0;
+let computerScore = 0;
+const root = document.querySelector("#app");
+
+const view = new scoreboardView(root, "Player", "Computer");
+
+
+
 
 console.log("help")

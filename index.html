@@ -11,7 +11,17 @@
             <h1>Rock Paper Scissors</h1>
         </div>
         
-        <p>Let's play a game!</p>
+        <p>Let's play a game! First to 5 points wins!</p>
+        <div class="scoreboard">
+            <div class="scoreboard__name scoreboard__name--one">${playerOneName}</div>
+            <div class="scoreboard__name scoreboard__name--two">${playerTwoName}</div>
+            <div class="scoreboard__score" data-for-player="one">0</div>
+            <div class="scoreboard__score" data-for-player="two">0</div>
+        </div>
+
+        <!-- <script type="module" src="js/script.js"></script> -->
+        
+
         <input type="button" class ="gamebutton" onclick="computerPlay(0);" value="Rock">
         <input type="button" class ="gamebutton" onclick="computerPlay(1);" value="Paper">
         <input type="button" class ="gamebutton" onclick="computerPlay(2);" value="Scissors">
