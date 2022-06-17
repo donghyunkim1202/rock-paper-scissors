@@ -69,37 +69,55 @@ function computerPlay(game){
 
     document.getElementById("player_score").innerHTML = playerScore;
     document.getElementById("computer_score").innerHTML = computerScore;
+    document.getElementById("ending").innerHTML = "Round: " + total;
 
 
-    document.getElementById("ending").innerHTML = "Hi"+total;
+    if (total == 1) {
+        document.getElementById("you-diedd").classList.remove('you-died');
+        document.getElementById("you-diedd").innerHTML = ""
 
-
-
+    }
 
     if (total > 4) {
         console.log("You dead son");
-        
+
         if (playerScore > computerScore) {
+            playerScore = 0;
+            computerScore = 0;
+            total = 0;
             console.log(1);
-            document.getElementById("ending").innerHTML = "WIN!"
+            document.getElementById("ending").innerHTML = "CONGRATS, YOU WIN!"
         } else if (playerScore < computerScore) {
+            playerScore = 0;
+            computerScore = 0;
+            total = 0;
             console.log(2);
-            document.getElementById("ending").innerHTML = "LOSE!"
+            document.getElementById("ending").innerHTML = "Wait...what is this?"
+            document.getElementById("you-diedd").innerHTML = "YOU DIED"
+            document.getElementById("you-diedd").classList.add('you-died');
         } else {
+            playerScore = 0;
+            computerScore = 0;
+            total = 0;
             console.log(3);
-            document.getElementById("ending").innerHTML = "DRAW!"
+            document.getElementById("ending").innerHTML = "DRAW! TRY AGAIN?"
         }
         console.log(playerScore, computerScore);
-
-
-
-        playerScore = 0;
-        computerScore = 0;
-        total = 0;
     }
 }
 
+function reset(){
+    playerScore = 0;
+    computerScore = 0;
+    total = 0;
 
+    document.getElementById("player_score").innerHTML = playerScore;
+    document.getElementById("computer_score").innerHTML = computerScore;
+    document.getElementById("ending").innerHTML = "Round: " + total;
 
+    document.getElementById("you-diedd").classList.remove('you-died');
+    document.getElementById("you-diedd").innerHTML = ""
+
+}
 
 console.log("help");

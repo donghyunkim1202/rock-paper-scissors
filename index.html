@@ -5,15 +5,20 @@
         <title>Rock Paper Scissors</title>
         <script src="js/script.js"></script>
         <link rel="stylesheet" href="css/style.css">
-        <!-- <link rel="shortcut icon" href="#"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="header">
             <h1>Rock Paper Scissors</h1>
         </div>
         
-        <p>Let's play a game! 5 round match, most scores win!</p>
-        <!-- <img class="ending" src="img/udied.gif" alt="u dead son" id="ending"> -->
+        <p>Let's play a game! Best of 5 rounds!</p>
+        <p>p.s. Losing might cause PTSD for some people...</p>
+
+        <!-- You Died Animation Trigger -->
+        <div id="you-diedd"></div>
+        
+
         <div class="scoreboard">
             <div class="sb_names">
                 <div class="scoreboard__name scoreboard__name--one">Player</div>
@@ -25,14 +30,42 @@
             </div>
         </div>
 
-        <div class ="oops" id="ending"></div>
+        <div class = "rounds">
+            <div id="ending">Choose to start!</div>
+        </div>
 
 
+        <div class="choices">
+            <div>
+                <input type="button" class ="gamebutton" onclick="computerPlay(0);" value="Rock">
+            </div>
+            <div>
+                <input type="button" class ="gamebutton" onclick="computerPlay(1);" value="Paper">
+            </div>
+            <div>
+                <input type="button" class ="gamebutton" onclick="computerPlay(2);" value="Scissors">
+            </div>
+        </div>
+        <div class="reset">
+            <input type="button" class ="gamebutton" onclick="reset()"; value ="Reset">
+        </div>
 
-        <input type="button" class ="gamebutton" onclick="computerPlay(0);" value="Rock">
-        <input type="button" class ="gamebutton" onclick="computerPlay(1);" value="Paper">
-        <input type="button" class ="gamebutton" onclick="computerPlay(2);" value="Scissors">
         <p>Result: </p>
         <p id="result"></p>
     </body>
+
+    <footer>
+        <div class="footer">
+            Copyright © 2022 donghyunkim1202
+        </div> 
+        <div class="github">
+            <div>
+                <p>Do you like what you see? Check me out at: <a href="https://github.com/donghyunkim1202" class ="github" target="_blank">
+                    <i class="fa fa-github" style="font-size:24px"></i>
+                </a></p>
+                
+            </div>
+        </div>
+
+    </footer>
 </html>

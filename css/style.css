@@ -9,8 +9,52 @@ body {
 }
 
 .header {
-    margin-top: 10%;
+    margin-top: 8em;
 }
+/* You Died Animation */
+.you-died {
+    animation: fadeIn 10s ;
+    font-family: 'OptimusPrinceps', 'Times New Roman', Times, serif;
+    font-size: 8em;
+    color: red;
+
+    position: absolute;
+
+    background: black;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    opacity: 0.9;
+
+    animation: fadeIn 5s, text-zoom 5s linear;
+}
+
+@font-face {
+    font-family: 'OptimusPrinceps';
+    src: url('/rock-paper-scissors/css/font/optimusprinceps/OptimusPrinceps.woff2')
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 0.9;}
+}
+
+@keyframes text-zoom {
+    0% { font-size: 5em; }
+    25% { font-size: 6em; }
+    50% { font-size: 7em; }
+    75% { font-size: 8em; }
+    100% { font-size: 8em; }
+}
+
+@keyframes fadeOut {
+    100% {opacity: 1;}
+    0% {opacity: 0;}
+}
+
 
 /* Scoreboard */
 .sb_names {
@@ -41,12 +85,9 @@ body {
     border: solid #3882F6;
 }
 
-.ending {
-    /* position: absolute;     */
-    position: absolute;
-    width: 380px;
-    height: 170px;
-    margin-left: -12%;;
+.rounds {
+    font-size: 30px;
+    margin-bottom: 25px;
 }
 
 /* Button */
@@ -75,4 +116,35 @@ body {
     transform: translateY(-4px);
     transition: all 0.1s;
   }
-  
+
+.choices {
+    display: flex;
+    margin-left: 36.7em;
+    gap: 1em;
+}
+
+.reset {
+    display: flex;
+    margin-left: 44.1em; margin-top: 1em;
+    
+}
+
+/* footer and github */
+.footer {
+    margin-top: 3em;
+}
+
+.github:link {
+    color:#3882F6;
+}
+.github:visited {
+    color: #3882F6;
+}
+
+.fa-github {
+    color: var(--primiary-light);
+    transition: transform 0.3s ease-in-out;
+}
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
